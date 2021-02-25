@@ -1,0 +1,2 @@
+1. Interfaces are 100% abstract classes / 100% contract which child class needs to fulfil.
+2. By default all methods of interface are public abstract ( we can't change it as well)
