@@ -1,0 +1,9 @@
+1 . connect system/wiley123
+2. alter user hr account unlock;
+3. connect hr/hr
+(It will ask to change password, give new password as hr)
+
+Sql Basic , PPT1/PPT2
+Aggregate Functions,Joins
+DDL : tables creating and table alteration
+DML
