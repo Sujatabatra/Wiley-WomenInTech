@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- By Deafult get method , if we rae not specifying anything in method attribute -->
+<!-- MyResource : URL for server resource -->
+<form action="/MyResource" method="post">
+Enter Employee Name : <input type="text" name="empName"> <br>
+Select Gender : <input type="radio" name="gender" value="F">Female <input type="radio" name="gender" value="M">Male <br>
+Select Hobbies : <input type="checkbox" name="hobbies" value="Travelling">Travelling <input type="checkbox" name="hobbies" value="Reading">Reading
+<input type="checkbox" name="hobbies" value="Cooking">Cooking<br>
+
+Select Favourite Color : <input type="color" name="FavCol"> <br>
+
+Select Department : <select name="deptt">
+		<option value="Sales">Sales</option>
+		<option value="hr">HR</option>
+		<option value="IT">IT</option>
+		<option value="Marketing">Marketing</option>
+</select> <br>
+
+Select Awards you have received so farm : <select name="awards" multiple>
+<option>Employee of month</option>
+<option>Employee of Year</option>
+<option>Best Performer</option>
+<option>Outstanding Performer</option>
+</select><br>
+<input type="submit" value="Save" name="action">
+</form>
+<br>
+<a href="./fifth.html">Go Back</a>
+</body>
+</html>
