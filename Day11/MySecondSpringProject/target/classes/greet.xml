@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Constructor Injection ( We are giving dependency value from constructor) -->
+	<bean class="com.sujata.producer.GoodMorning" id="mrng">
+		<constructor-arg name="name" value="Lina"></constructor-arg>
+	</bean>
+	
+<!-- Setter Injection ( We are giving dependency value from setter -->
+	<bean class="com.sujata.producer.GoodEvening" id="eve">
+		<property name="name" value="Anjali"></property>
+	</bean>
+
+	<bean class="com.sujata.producer.GoodMorning" id="mrg">
+		<property name="name" value="Swapna"></property>
+	</bean>
+</beans>
