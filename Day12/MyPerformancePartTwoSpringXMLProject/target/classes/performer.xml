@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.sujata.producer.Singer" id="Jincy" >
+		<property name="songs">
+			<list>
+				<value>Twinkle Twinkle Little Star</value>
+				<value>Johny Johny Yes Papa</value>
+				<value>Wheels on the Bus</value>
+				<value>Johny Johny Yes Papa</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="com.sujata.producer.Juggler" id="Lina">
+		<property name="balls">
+			<set>
+				<value>3</value>
+				<value>8</value>
+				<value>5</value>
+			</set>
+		</property>
+	</bean>
+	
+	<!-- if in map keys and values both are of type String we can use <props>  tag -->
+	<bean class="com.sujata.producer.Dancer" id="Gerardin" scope="prototype">
+		<constructor-arg name="songsStyles">
+			<props>
+				<prop key="Twinkle Twinkle Little Star">Kathak</prop>
+				<prop key="Johny Johny Yes Papa">Western</prop>
+				<prop key="Wheels on the Bus">Bharatnatyam</prop>
+			</props>
+		</constructor-arg>
+	</bean>
+	
+	<bean class="com.sujata.producer.Guitar" id="guitar"></bean>
+	
+	<bean class="com.sujata.producer.Tabla" id="tabla"></bean>
+	
+	<bean class="com.sujata.producer.Drum" id="drum"></bean>
+	
+	<bean class="com.sujata.producer.Instrumentalist" id="Swapna">
+		<property name="songsInstruments">
+			<map>
+			<entry key="Wheels on the Bus" value-ref="drum"></entry>
+			<entry key="Johny Johny Yes Papa" value-ref="guitar"></entry>
+			<entry key="Twinkle Twinkle Little Star" value-ref="tabla"></entry>
+			<entry key="Baba Baba Black Sheep" value-ref="guitar"></entry>
+			</map>
+		</property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.sujata.producer.Singer" id="Jincy">
+		<property name="song" value="Twinkle Twinkle Little Star"></property>
+	</bean>
+	
+	<bean class="com.sujata.producer.Juggler" id="Lina">
+		<property name="balls" value="3"></property>
+	</bean>
+	
+	<bean class="com.sujata.producer.Dancer" id="Gerardin">
+		<constructor-arg name="style" value="Bharatnatyam"></constructor-arg>
+	</bean>
+	  
+	<bean class="com.sujata.producer.Guitar" id="guitar" autowire-candidate="false"></bean>
+	
+	<bean class="com.sujata.producer.Tabla" id="tabla" autowire-candidate="false"></bean>
+	
+	<bean class="com.sujata.producer.Drum" id="drum"></bean>
+	
+<!-- autowired: automatic wiring of the property of bean with an exsting bean either wrt to name or wrt type or wrt constructor(type) -->
+	<bean class="com.sujata.producer.Instrumentalist" id="Swapna" autowire="byType">
+	</bean>
+
+	<!--  
+	<bean class="com.sujata.producer.Instrumentalist" id="Swapna" autowire="byName">
+	</bean>
+	-->
+	<!-- When we are choosing constructor injection first it looks for same name beans if dere autowire it other wise go for byType -->
+	<bean class="com.sujata.producer.Instrumentalist" id="Rajlakshmi" autowire="constructor"></bean>
+</beans>
