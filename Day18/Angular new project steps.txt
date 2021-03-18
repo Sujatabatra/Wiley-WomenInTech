@@ -1,0 +1,9 @@
+1. open command line 
+2. npm install @angular/cli -g
+
+3. create a folder , where you want to place all your angular projects
+4. open Visual Studio code
+5. go to file option and select new window
+6. on new window open folder which you have created in step 3
+7. press Ctrl+` to open terminal
+8. execute command ng new name of the anuglarproject in terminal
